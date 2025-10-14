@@ -1,0 +1,40 @@
+<nav class="navbar" data-controller="navbar">
+    <div class="container">
+        <ul class="navbar__list">
+            <li class="navbar__item">
+                <a class="navbar__link" href="#">
+                    Chatroom
+                </a>
+            </li>
+            <li class="navbar__item">
+                <a class="navbar__link" href="#">
+                    Messages
+                </a>
+            </li>
+            <li class="navbar__item navbar__item--menu">
+                <a class="navbar__link navbar__link--menu" href="#" data-action="click->navbar#toggle:prevent" data-navbar-target="navLinkMenu">
+                    Account
+                </a>
+                <div class="menu" data-navbar-target="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                Log in
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                Sign in
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                Log out
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,47 @@
+.navbar {
+    background-color: #191e24;
+}
+
+.navbar__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.navbar__item--menu {
+    position: relative;
+    margin-left: auto;
+}
+
+.navbar__link,
+.menu__link {
+    display: block;
+    padding: .75rem;
+    color: #ffffff;
+    background-color: #191e24;
+}
+
+.navbar__link:hover,
+.menu__link:hover {
+    background-color: #242b33;
+}
+
+.navbar__link--menu.is-open {
+    background-color: #242b33;
+}
+
+.menu {
+    display: none;
+}
+
+.menu.is-open {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+}
+
+.menu__link {
+    text-align: center;
+}
