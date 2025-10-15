@@ -1,0 +1,15 @@
+<li class="messages__item">
+    <div class="message">
+        <div class="message__wrapper">
+            <span class="message__author">
+                <%= message.user.username %>:
+            </span>
+            <span class="message__content">
+                <%= message.body %>
+            </span>
+        </div>
+        <small class="message__timestamp">
+            <%= message.created_at.strftime("%d/%m/%Y %H:%M") %>
+        </small>
+    </div>
+</li>

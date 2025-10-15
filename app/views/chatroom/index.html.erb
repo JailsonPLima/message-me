@@ -2,39 +2,7 @@
     <div class="chatroom__wrapper">
         <div class="messages">
             <ul class="messages__list">
-                <% @messages.each do |message| %>
-                    <li class="messages__item">
-                        <div class="message">
-                            <div class="message__wrapper">
-                                <span class="message__author">
-                                    <%= message.user.username %>:
-                                </span>
-                                <span class="message__content">
-                                    <%= message.body %>
-                                </span>
-                            </div>
-                            <small class="message__timestamp">
-                                <%= message.created_at.strftime("%d/%m/%Y %H:%M") %>
-                            </small>
-                        </div>
-                    </li>
-                <% end %>
-
-                <%# <li class="messages__item">
-                    <div class="message">
-                        <div class="message__wrapper">
-                            <span class="message__author">
-                                Joãozinho:
-                            </span>
-                            <span class="message__content">
-                                Bom dia!
-                            </span>
-                        </div>
-                        <small class="message__timestamp">
-                            15/10/2025 09:19
-                        </small>
-                    </div>
-                </li> %>
+                <%= render @messages %>
             </ul>
         </div>
         <form class="chatroom__form" action="">
