@@ -11,15 +11,30 @@
 users = [
   {
     username: "joaozinho",
-    password: "123456"
+    password: "123456",
+    messages: [
+      {
+        body: "Bom dia!"
+      }
+    ]
   },
   {
     username: "mariazinha",
-    password: "123456"
+    password: "123456",
+    messages: [
+      {
+        body: "Bom dia, Joãozinho!"
+      }
+    ]
   },
   {
     username: "fulanildo",
-    password: "123456"
+    password: "123456",
+    messages: [
+      {
+        body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni excepturi ea voluptatum architecto repellat. Autem suscipit officia at eum ad dolorem iste, qui voluptates nesciunt dolores doloremque esse! Itaque."
+      }
+    ]
   }
 ]
 
