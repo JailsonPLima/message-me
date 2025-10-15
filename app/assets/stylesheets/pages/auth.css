@@ -1,0 +1,26 @@
+.auth {
+    display: flex;
+    justify-content: center;
+}
+
+.auth.container {
+    margin: 2rem auto 0 auto;
+}
+
+.auth__field:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.auth__field:last-child {
+    text-align: right;
+}
+
+.auth__form {
+    padding: .5rem;
+    border: .125rem solid #dddddd;
+}
+
+.auth__label,
+.auth__input {
+    display: block;
+}
