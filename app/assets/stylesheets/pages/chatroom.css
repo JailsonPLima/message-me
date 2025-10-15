@@ -37,6 +37,10 @@
     align-items: flex-start;
 }
 
+.message__author {
+    font-weight: bold;
+}
+
 .message__timestamp {
     min-width: 6.625rem;
     margin-left: .5rem;

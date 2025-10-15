@@ -2,7 +2,25 @@
     <div class="chatroom__wrapper">
         <div class="messages">
             <ul class="messages__list">
-                <li class="messages__item">
+                <% @messages.each do |message| %>
+                    <li class="messages__item">
+                        <div class="message">
+                            <div class="message__wrapper">
+                                <span class="message__author">
+                                    <%= message.user.username %>:
+                                </span>
+                                <span class="message__content">
+                                    <%= message.body %>
+                                </span>
+                            </div>
+                            <small class="message__timestamp">
+                                <%= message.created_at.strftime("%d/%m/%Y %H:%M") %>
+                            </small>
+                        </div>
+                    </li>
+                <% end %>
+
+                <%# <li class="messages__item">
                     <div class="message">
                         <div class="message__wrapper">
                             <span class="message__author">
@@ -16,37 +34,7 @@
                             15/10/2025 09:19
                         </small>
                     </div>
-                </li>
-                <li class="messages__item">
-                    <div class="message">
-                        <div class="message__wrapper">
-                            <span class="message__author">
-                                Mariazinha:
-                            </span>
-                            <span class="message__content">
-                                Bom dia, Joãozinho!
-                            </span>
-                        </div>
-                        <small class="message__timestamp">
-                            15/10/2025 09:22
-                        </small>
-                    </div>
-                </li>
-                <li class="messages__item">
-                    <div class="message">
-                        <div class="message__wrapper">
-                            <span class="message__author">
-                                Fulanildo:
-                            </span>
-                            <span class="message__content">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni excepturi ea voluptatum architecto repellat. Autem suscipit officia at eum ad dolorem iste, qui voluptates nesciunt dolores doloremque esse! Itaque.
-                            </span>
-                        </div>
-                        <small class="message__timestamp">
-                            15/10/2025 09:22
-                        </small>
-                    </div>
-                </li>
+                </li> %>
             </ul>
         </div>
         <form class="chatroom__form" action="">
@@ -57,25 +45,19 @@
     <aside class="participants">
         <span class="participants__text">Online users</span>
         <ul class="participants__list">
-            <li class="participants__item">
+            <% @users.each do |user| %>
+                <li class="participants__item">
+                    <a class="participants__link" href="#">
+                        <%= user.username %>
+                    </a>
+                </li>
+            <% end %>
+
+            <%# <li class="participants__item">
                 <a class="participants__link" href="#">
                     Joãozinho
                 </a>
-            </li>
-        </ul>
-        <ul class="participants__list">
-            <li class="participants__item">
-                <a class="participants__link" href="#">
-                    Mariazinha
-                </a>
-            </li>
-        </ul>
-        <ul class="participants__list">
-            <li class="participants__item">
-                <a class="participants__link" href="#">
-                    Fulanildo
-                </a>
-            </li>
+            </li> %>
         </ul>
     </aside>
 </section>
