@@ -1,23 +1,22 @@
 <section class="auth container">
-    <form class="auth__form" action="">
-        
+    <%= form_with(scope: :session, url: login_path, class: "auth__form") do |f| %>
         <div class="auth__field">
-            <label for="username" class="auth__label">Username</label>
-            <input class="auth__input" id="username" name="username" type="text" />
+            <%= f.label :username, "Username", class: "auth__label" %>
+            <%= f.text_field :username, class: "auth__input" %>
         </div>
-        
+
         <div class="auth__field">
-            <label for="password" class="auth__label">Password</label>
-            <input class="auth__input" id="password" name="password" type="password" />
+            <%= f.label :password, "Password", class: "auth__label" %>
+            <%= f.text_field :password, class: "auth__input" %>
         </div>
-        
+
         <div class="auth__field">
-            <input class="auth__submit" type="submit" value="Submit" />
+            <%= f.submit "Login" %>
         </div>
 
         <p class="auth__paragraph">
             Not registered? 
             <a class="auth__link" href="#">Create an account</a>
         </p>
-    </form>
+    <% end %>
 </section>
