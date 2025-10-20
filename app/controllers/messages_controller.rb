@@ -7,7 +7,10 @@ class MessagesController < ApplicationController
   def create
     message = current_user.messages.build(message_params)
     if message.save
-      redirect_to root_url
+      ActionCable.server.broadcast("chatroom", { message: message, user: message.user.username })
+      head :ok
+    else
+      render :new, status: :unprocessable_entity
     end
   end
 
